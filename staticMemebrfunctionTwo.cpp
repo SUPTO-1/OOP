@@ -6,10 +6,7 @@ public:
   void input();
   void display();
   static int cnt;
-  static void totalStudent()
-  {
-    cout<<"Total Student: "<<cnt<<endl;
-  }
+  static void totalStudent();
 };
 void students :: input()
 {
@@ -24,14 +21,18 @@ void students :: display()
   cout<<"Your Name: "<<name<<endl;
   cout<<"Your Id: "<<id<<endl;
 }
+void students :: totalStudent()
+{
+  cout<<"Total Student: "<<cnt<<endl;
+}
 int students :: cnt;
 int main()
 {
   students nine[20];
   for(int i=1;i<=3;i++)
   {
-    nine[0].input();
-    nine[0].display();
+    nine[i].input();
+    nine[i].display();
     students :: totalStudent();
   }
 }
